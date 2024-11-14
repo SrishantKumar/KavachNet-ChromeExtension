@@ -25,7 +25,7 @@
 
 1. Clone this repository:
 ```bash
-git clone [repository-url]
+git clone https://github.com/SrishantKumar/KavachNet-ChromeExtension.git
 cd kavachnet
 ```
 
