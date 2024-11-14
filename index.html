@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कवचNet - Advanced Cipher Decryption</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/modern.css">
+    <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+    <div class="matrix-bg" id="matrix-canvas"></div>
+    
+    <main class="container">
+        <header>
+            <img src="assets/logo.png" alt="कवचNet Logo" class="logo">
+            <h1 class="header-title">कवचNet</h1>
+            <p class="header-subtitle">Advanced Cipher Decryption By Srishant</p>
+        </header>
+
+        <div class="main-card">
+            <div class="input-area">
+                <textarea id="input-text" placeholder="Enter encrypted text here..."></textarea>
+                <div class="button-group">
+                    <button id="decrypt-btn" class="btn primary">
+                        <span>Decrypt</span>
+                    </button>
+                    <button id="paste-btn" class="btn secondary">
+                        <span>Paste</span>
+                    </button>
+                    <button id="clear-btn" class="btn secondary">
+                        <span>Clear</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="results" class="result-area">
+                <!-- Results will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Made with ❤️ by Srishant</p>
+    </footer>
+
+    <script type="module" src="js/matrix.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* Popup-specific styles */
+body {
+    width: 480px;
+    height: 600px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 100%;
+    padding: 1rem;
+}
+
+.main-card {
+    margin: 1rem;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-blue);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-green);
+}
+
+/* Compact header for popup */
+.header {
+    padding: 0.5rem 0;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+}
+
+.header .subtitle {
+    font-size: 0.9rem;
+}
+
+.header-logo {
+    width: 32px;
+    height: 32px;
+}
+
+/* Compact input area */
+.input-area textarea {
+    min-height: 100px;
+    max-height: 150px;
+}
+
+/* Compact results */
+.result-item {
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+}
+
+/* Footer */
+.footer {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}

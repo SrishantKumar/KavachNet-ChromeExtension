@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Analyzer - Test Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="width: 100%; max-width: 800px; margin: 0 auto; padding: 20px;">
+    <div class="container" style="width: 380px; margin: 0 auto; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="कवचNet Logo" width="48" height="48">
+                <h1>कवचNet</h1>
+            </div>
+            <p class="subtitle">Caesar Cipher Decoder - Test Mode</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <textarea id="encryptedText" placeholder="Enter encrypted text here..." rows="4"></textarea>
+                <button id="decryptBtn" class="primary-btn">
+                    <span class="btn-content">
+                        <img src="logo.png" alt="" width="18" height="18" class="decrypt-icon">
+                        Decrypt
+                    </span>
+                </button>
+            </div>
+
+            <div class="output-section" style="display: none">
+                <div class="result-controls">
+                    <h3>Best Match</h3>
+                    <div class="controls">
+                        <button id="copyBtn" class="icon-btn" title="Copy to clipboard">
+                            <img src="logo.png" alt="" width="16" height="16">
+                        </button>
+                        <button id="toggleAllBtn" class="icon-btn" title="Show all shifts">
+                            <img src="logo.png" alt="" width="16" height="16" class="toggle-icon">
+                        </button>
+                    </div>
+                </div>
+
+                <div id="bestMatch" class="result-text"></div>
+                
+                <div id="allResults" class="all-results" style="display: none">
+                    <h3>All Shifts</h3>
+                    <div class="shifts-container"></div>
+                </div>
+            </div>
+
+            <div class="notification" style="display: none">
+                <span class="notification-text"></span>
+            </div>
+        </main>
+
+        <footer>
+            <p class="privacy-notice">🔒 No data is collected or stored</p>
+            <div class="developer-credit">
+                Made by Srishant with <span class="heart">❤️</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Test Controls -->
+    <div style="margin-top: 40px; padding: 20px; background: #f8fafc; border-radius: 8px;">
+        <h2>Test Controls</h2>
+        <div style="margin: 20px 0;">
+            <h3>Sample Test Cases:</h3>
+            <button onclick="loadTestCase('fyyfhp fy ifbs ts 12/25/23')" class="primary-btn" style="margin: 5px;">
+                Test Case 1: Date and Location
+            </button>
+            <button onclick="loadTestCase('zxmzfz yfwlzyx nrrzinfyzqd')" class="primary-btn" style="margin: 5px;">
+                Test Case 2: Urgency
+            </button>
+            <button onclick="loadTestCase('gur rarzl vf nggnpxvat sebz gur abegu')" class="primary-btn" style="margin: 5px;">
+                Test Case 3: Direction
+            </button>
+        </div>
+        <div id="testResults" style="margin-top: 20px;">
+            <h3>Test Results:</h3>
+            <pre id="testOutput" style="background: #1e293b; color: #fff; padding: 15px; border-radius: 8px; overflow-x: auto;"></pre>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/cipher.js"></script>
+    <script src="js/popup.js"></script>
+    <script>
+        // Test helper functions
+        function loadTestCase(text) {
+            document.getElementById('encryptedText').value = text;
+            document.getElementById('decryptBtn').click();
+            
+            // Log test results
+            setTimeout(() => {
+                const results = currentResults[0];
+                const testOutput = {
+                    input: text,
+                    shift: results.shift,
+                    decrypted: results.text,
+                    analysis: results.analysis,
+                    score: results.score
+                };
+                
+                document.getElementById('testOutput').textContent = 
+                    JSON.stringify(testOutput, null, 2);
+            }, 100);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>कवचNet</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="कवचNet Logo" width="48" height="48">
+        <h1>कवचNet</h1>
+      </div>
+      <p class="subtitle">Caesar Cipher Decoder</p>
+    </header>
+
+    <main>
+      <div class="input-section">
+        <textarea 
+          id="encryptedText" 
+          placeholder="Enter encrypted text here..."
+          rows="4"
+        ></textarea>
+        <button id="decryptBtn" class="primary-btn">
+          <span class="btn-content">
+            <img src="logo.png" alt="" width="18" height="18" class="decrypt-icon">
+            Decrypt
+          </span>
+        </button>
+      </div>
+
+      <div class="output-section" style="display: none">
+        <div class="result-controls">
+          <h3>Best Match</h3>
+          <div class="controls">
+            <button id="copyBtn" class="icon-btn" title="Copy to clipboard">
+              <img src="logo.png" alt="" width="16" height="16">
+            </button>
+            <button id="toggleAllBtn" class="icon-btn" title="Show all shifts">
+              <img src="logo.png" alt="" width="16" height="16" class="toggle-icon">
+            </button>
+          </div>
+        </div>
+
+        <div id="bestMatch" class="result-text"></div>
+        
+        <div id="allResults" class="all-results" style="display: none">
+          <h3>All Shifts</h3>
+          <div class="shifts-container"></div>
+        </div>
+      </div>
+
+      <div class="notification" style="display: none">
+        <span class="notification-text"></span>
+      </div>
+    </main>
+
+    <footer>
+      <p class="privacy-notice">🔒 No data is collected or stored</p>
+      <div class="developer-credit">
+        Made by Srishant with <span class="heart">❤️</span>
+      </div>
+    </footer>
+  </div>
+  <script src="js/utils.js"></script>
+  <script src="js/cipher.js"></script>
+  <script src="js/popup.js"></script>
+</body>
+</html>

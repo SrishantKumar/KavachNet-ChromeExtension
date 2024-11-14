@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "कवचNet - Advanced Cipher Decoder",
+  "description": "Intelligent multi-cipher detection and decryption toolkit with automatic method detection",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "assets/logo.png",
+      "32": "assets/logo.png",
+      "48": "assets/logo.png",
+      "128": "assets/logo.png"
+    }
+  },
+  "icons": {
+    "16": "assets/logo.png",
+    "32": "assets/logo.png",
+    "48": "assets/logo.png",
+    "128": "assets/logo.png"
+  },
+  "permissions": [
+    "clipboardWrite",
+    "clipboardRead"
+  ],
+  "author": "Srishant",
+  "homepage_url": "https://github.com/yourusername/kavachnet"
+}
