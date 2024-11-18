@@ -1,7 +1,3 @@
-### **README.md** for **KavachNet Chrome Extension**
-
----
-
 # **KavachNet Chrome Extension**  
 ### *Your Shield Against Encrypted Threats*  
 
