@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "KavachNet Security Tools",
+  "version": "1.0",
+  "description": "A comprehensive security tool for text decryption and threat analysis",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/logo.png",
+      "48": "icons/logo.png",
+      "128": "icons/logo.png"
+    }
+  },
+  "icons": {
+    "16": "icons/logo.png",
+    "48": "icons/logo.png",
+    "128": "icons/logo.png"
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KavachNet Security</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor-glow"></div>
+    <canvas id="particleCanvas"></canvas>
+    <div class="container">
+        <div class="header">
+            <h1>कवचNet</h1>
+            <p class="subtitle">Advanced Ceasar Cipher Decoder</p>
+        </div>
+        
+        <div class="content">
+            <div class="input-section">
+                <textarea id="inputText" placeholder="Enter text to analyze..."></textarea>
+                <button id="decryptAction" class="glow-button">Decrypt & Analyze</button>
+            </div>
+
+            <div id="decryptResult" class="result-section hidden">
+                <div class="result-container">
+                    <h2>Decrypted Content</h2>
+                    <div id="decryptedContent" class="content-box"></div>
+                </div>
+
+                <div class="result-container">
+                    <h2>Threat Analysis</h2>
+                    <div id="threatContent" class="content-box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="copyright"> 2024 कवचNet. All rights reserved Team DefendX.</p>
+            <p class="made-with">Made with <span class="heart">❤️</span> by Team DefendX</p>
+        </div>
+    </footer>
+
+    <script src="popup.js"></script>
+</body>
+</html>
